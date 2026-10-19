@@ -1,0 +1,11 @@
+--- a/src/parcel.rs
++++ b/src/parcel.rs
+@@ -2211,7 +2211,7 @@
+     }
+ 
+     /// AOSP `writeFileDescriptor(fd, true)`; the parcel owns `fd` (module doc "Kernel fds").
+-    pub(crate) fn write_kernel_fd(&mut self, fd: OwnedFd) -> Result<()> {
++    pub fn write_kernel_fd(&mut self, fd: OwnedFd) -> Result<()> {
+         // RPC carries an fd as a table index; `file_descriptor` routes it there first.
+         if self.rpc.is_some() {
+             return Err(StatusCode::BadType);

@@ -1,0 +1,6 @@
+id=sensor-blocker
+name=Sensor Blocker
+version=v0.1.0
+versionCode=1
+author=Mufanc
+description=Blocks selected apps from sensor access
